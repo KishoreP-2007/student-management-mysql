@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Student Management System</h1>
+        <p>Manage student records using MySQL</p>
+    </header>
+
+    <main>
+        <section class="card">
+            <h2 id="form-title">Add Student</h2>
+            <form id="student-form">
+                <input type="hidden" id="student-id">
+                <input type="text" id="name" placeholder="Student Name"
+                       maxlength="100" required>
+                <input type="email" id="email" placeholder="Email Address"
+                       maxlength="150" required>
+                <input type="text" id="course" placeholder="Course"
+                       maxlength="100" required>
+                <button type="submit" id="submit-button">Add Student</button>
+                <button type="button" id="cancel-button" hidden>Cancel</button>
+            </form>
+            <p id="message" role="status" aria-live="polite"></p>
+        </section>
+
+        <section class="card">
+            <h2>Student Records</h2>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th><th>Name</th><th>Email</th>
+                            <th>Course</th><th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="student-list"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
